@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title><%= yield(:title) %>|Ruby on Rails Sample App</title>
@@ -11,5 +11,26 @@
 
   <body>
     <%= yield %>
+  </body>
+</html>
+ -->
+
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= render 'layouts/rails_default' %>
+    
+    <%= render 'layouts/shim' %>
+
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    
+    <div class="container">
+      <%= yield %> 
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
